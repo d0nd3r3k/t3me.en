@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	<!-- Meta Data-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-	scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<title>T3ME - Mobile Reader</title>
+	
+		
+	<!-- The Stylesheets-->
+	<link rel="stylesheet" href="css/style.css" >
+	
+	<!-- <script type="text/javascript" src="js/cordova-2.7.0.js"></script> -->
+	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="js/quo.js"></script>
+	<script type="text/javascript" src="js/noClickDelay.js"></script>
+	
+	</head>
+	<body>
+	
+		<div id="header">
+			<img src="img/logo@2x.jpg"/>
+			
+		</div>
+		<a class='backbutton button'><img src='img/back-black.png'/></a>
+		<div class="navigation">
+			<ul>
+				<li id="latest"><a class="red button" href="#">Latest</a></li>
+				<li id="news"><a class="blue button" href="#">News</a></li>
+				<li id="feature"><a class="orange button" href="#">Feature</a></li
+			</ul>			
+		</div>
+		
+		
+			<div id="wrapper" class="page center">
+				<div id="scroller">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span>
+					</div>
+					<ul class="articles"></ul>
+				</div>
+			</div>
+	
+		
+		<div id="articlePage" class="page right">
+		
+		</div>	
+		
+		<div id="footer">
+			<div class='social'> 
+			<a href="http://t3me.com" class='external'>subscribe on t3me.com</a>
+		</div>
+	</div>
+		<!-- The JavaScripts-->
+		<script type="text/javascript" src="js/mustache.js"></script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript" src="js/jquery.dateFormat.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+		<!-- Moustache.Js Templates-->
+		<script id="articleTpl" type="text/template">
+		<li class="{{articleType}}">	
+			<img class="{{articleType}}" src="{{articleImage}}"/>
+			<div class="txt-wrapper">
+				<p class="type">
+					<span class="pubDate hide">{{articlePubDate}}</span>
+					<span class="category">{{articleCategory}}</span>
+					<span class="author hide">{{articleAuthor}}</span>
+				</p>
+				<h2 class="title">{{articleTitle}}</h2>
+				<p class="txt">{{articleDesc}}</p>
+			</div>
+			<div class="hide fullArticle">
+				  {{articleText}}
+				  
+			</div>
+		</li>
+		</script>
+		
+		<script id="fullArticleTpl" type="text/template">
+				<div class="txt-wrapper">
+					<p class="type">
+						<span class="pubDate">{{articlePubDate}}</span> - <span class="category">{{articleCategory}}</span>
+						- <span class="author">By {{articleAuthor}}</span>
+					</p>
+					<h1 class="title">{{articleTitle}}</h1>
+				</div>	
+				<img class="{{articleType}} big" src="{{articleImage}}"/>
+				
+				<div id="fullArticlePara">	
+				</div>
+		</script>
+
+	</body>
+</html>
