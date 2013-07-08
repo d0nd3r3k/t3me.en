@@ -1,3 +1,4 @@
+(function(){
 var homePage = document.getElementById("wrapper"),
 articlePage = document.getElementById("articlePage"),
 currentPage = homePage;
@@ -178,3 +179,4 @@ $(document).ready(function(){
 		myScroll.refresh();	
 	});
 })
+})();
