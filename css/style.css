@@ -5,9 +5,11 @@ body,ul,li,p,h1,h2,h3,h4,h5,h6 {
 	margin:0;
 	border:0;
 }
-
+html{
+	font-size: 12px;
+}
 body {
-	font-size:12px;
+	font-size:1.2em;
 	-webkit-user-select:none;
 	-webkit-text-size-adjust:none;
 	font-family:'LatoLight';
@@ -84,8 +86,8 @@ background-color: #F36F21;
 #wrapper {
 	position:absolute; z-index:1;
 	top:104px; bottom:48px; left:-9999px;
-	width:100%;
 	background:#aaa;
+	width: 80%;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -226,7 +228,7 @@ ul.articles img.features{
 	z-index:1;
 	top:104px; 
 	bottom:48px; 
-	width:100%;
+	width:80%;
 	padding: 14px 0;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -294,23 +296,59 @@ padding: 0 13px;
 .author{
 	text-transform: capitalize;
 }
-
-/*Tablet Responsive Design*/
-@media all and (max-width: 1024px) and (min-width: 768px) {
-	#footer{
-		
-	}
-	body{
-		font-size: 100%;
-	}
-	ul.articles li .txt {
-	font-family: 'LatoLight';
-	}
-	ul.articles li img {
-	height: 80px;
-	width: 110px;
-	}
-	#articlePage img {
-	width: 320px
-	}
+.sidebar{
+	width: 20%;
+	position: absolute;
+	z-index: 1;
+	top: 104px;
+	bottom: 48px;
+	right: 0;
+	background: #222;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
+#player{
+	margin-top: 8px;
+}
+.innerWrap{
+	margin: 10px;
+	color: white;
+}
+/*Youtube Section*/
+.youtube .carousel{
+	position: absolute;
+	margin-top: 160px;
+	margin-right: 8px;
+}
+.youtube ul.carousel li{
+	display: inline;
+}
+.youtube .carousel .thumbnail{
+	width:20%;
+}
+.youtube .player{
+	width: 100%;
+}
+.ad{
+	margin-top: 96px;
+	margin-left: 4px;
+}
+@media all and (max-width: 768px) {
+  #wrapper{
+	  width: 100%;
+  }
+  #articlePage{
+	  width: 100%;
+  }
+  .sidebar{
+	  display: none;
+  }
+  
+}
+@media all and (max-width: 568px){
+	body{
+		  font-size: 1em;
+	  }
+}
+
+

@@ -115,8 +115,12 @@ function touchScroll(id){
 }
 
 $(document).ready(function(){
-	getData();
-		
+	  getData();
+	  
+	  
+	 	$('#player').youTubeChannel({user:'t3medotcom'});
+	  
+	  	
 	  $('.external').on('click', function(event) {
 		 event.preventDefault();
 		 var url = $(this).attr('href');
