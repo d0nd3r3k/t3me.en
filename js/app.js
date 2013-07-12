@@ -2,9 +2,6 @@
 var homePage = document.getElementById("wrapper"),
 articlePage = document.getElementById("articlePage"),
 currentPage = homePage;
-function loadURL(url){
-    	var ref = window.open(url, '_system');
-    }
     
 function slidePageFrom(page, from) {
 	// Position the page at the starting position of the animation
@@ -33,7 +30,6 @@ function getData(){
 					articleText: article.description,
 					articleAuthor: article.author
 				};
-				
 				var template = $('#articleTpl').html();
 				var html = Mustache.to_html(template, articleData);
 				$('ul.articles').append(html);	
@@ -119,13 +115,6 @@ $(document).ready(function(){
 	  
 	  
 	 	$('#player').youTubeChannel({user:'t3medotcom'});
-	  
-	  	
-	  $('.external').on('click', function(event) {
-		 event.preventDefault();
-		 var url = $(this).attr('href');
-		 loadURL(url);
-	  });
 	  
 	$("ul.articles").on('click','li',function(e){
 		
